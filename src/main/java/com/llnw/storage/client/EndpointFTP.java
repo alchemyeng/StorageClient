@@ -230,4 +230,11 @@ public class EndpointFTP implements Endpoint {
             throw EndpointUtil.unwindInterruptException(e);
         }
     }
+
+    public void rename(String oldPath, String newPath) throws IOException
+    {
+
+    }
 }
+
+

@@ -609,4 +609,13 @@ public class EndpointHTTP implements EndpointMultipart {
             this.type = type;
         }
     }
+
+    public void rename(String oldPath, String newPath) throws IOException
+    {
+	int returnCode = execute(new RPC("rename", "oldpath", oldPath, "newpath", newPath)).getAsInt();
+	if (returnCode != 0) {
+	    throw throwAndLog("Couldn't rename directory: " + returnCode);
+	}
+    }
+
 }

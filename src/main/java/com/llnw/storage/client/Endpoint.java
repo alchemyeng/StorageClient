@@ -19,4 +19,7 @@ public interface Endpoint extends Closeable {
     void upload(ByteBuffer byteBuffer,  String path, String name, @Nullable ActivityCallback callback) throws IOException;
     void noop() throws IOException;
     boolean exists(String path) throws IOException;
+
+    public void rename(String oldPath, String newPath) throws IOException;
+
 }
