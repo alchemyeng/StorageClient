@@ -75,6 +75,10 @@ public class MockEndpointFactory extends EndpointFactory {
 
                 }
 
+		@Override
+		public void rename(String oldPath, String newPath) throws IOException {
+		    
+		}
             };
         }
     }
